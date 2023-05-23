@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form tag</title>
+	<style type="text/css">
+		
+		body{
+			background-color:skyblue;
+		}
+		input{ border-radius:5px;
+               border-color: lightblue;
+               padding: 5px;
+		 }
+		.ip{
+			border:none;
+			border-bottom-color: gray;
+			border-bottom-style: solid;
+			border-bottom-width: 2px;
+		}
+		.bt{
+			border-radius: 5px;
+			border-color: gray;
+		}
+		#main{
+			/*border:1px solid red;*/
+			}
+
+		form{
+			background-color: lightblue;
+			width:400px;
+			margin:20px;
+			border-radius: 40px;
+		}
+		.bt:hover{
+          background-color: lightgray;
+		}
+		
+	</style>
+</head>
+<body>
+<div id="main">
+	<!--autocomplete="off" it does not show the whatever is put in the field that text is not shown -->
+	<form autocomplete="off" >
+		<fieldset>
+			<legend align="center" style="text-transform: uppercase;">registration form</legend>
+			<label>Username<sup style="color:red">*</sup>:</label>
+			<input type="text" name="un" minlength="5" maxlength="15" size="12" class="ip" required autofocus placeholder="USERNAME">
+			<br><br>
+			<label>Password<sup style="color:red">*</sup>:</label>
+			<input type="Password" name="pass" maxlength="16" class="ip" required placeholder="PASSWORD">
+			<br><br>
+			<label>Email id :</label>
+			<input type="Email" name="eml" placeholder="ENTER YOUR EMAIL ID">
+			<br><br>
+			<label>DOB :</label>
+			<input type="date" name="dt" >
+			<br><br>
+
+			<label>University:</label>
+			<select style="background-color:lightblue; ">
+				<option disabled selected>SELECT YOUR UNIVERSITY</option>
+				<option>SPPU</option>
+				<option>BATU</option>
+				<option>SGBAU</option>
+			</select>
+			<br><br>
+
+			<label>Gender :</label>
+			<input type="radio" name="gender">Male
+			<input type="radio" name="gender">Female
+			<input type="radio" name="gender">Others
+			<br><br>
+
+			<label>Resume :</label>
+			<input type="file" name="fil" multiple>
+			<br><br>
+            <!--here multiple = using this wwe can select multiple files at once -->
+			<input type="checkbox" name="cbx" required>I agree, that all the above information is true.
+			<br><br>
+
+			<input type="submit" name="sbmt" class="bt" value="SUBMIT">
+			<input type="reset" name="cncl"  class="bt" value="CANCLE">
+		</fieldset>
+	</form>
+</div>
+</body>
+</html>
